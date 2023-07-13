@@ -8,3 +8,4 @@ A simple application with multiple steps to learn event and state management
 
 - Event handling
 - State management
+- Component children
