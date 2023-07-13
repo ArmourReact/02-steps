@@ -36,22 +36,24 @@ const App = () => {
           </p>
 
           <div className="buttons">
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
-              onClick={handlePrevious}
-            >
-              Previous
-            </button>
-            <button
-              style={{ backgroundColor: "#7950f2", color: "#fff" }}
-              onClick={handleNext}
-            >
-              Next
-            </button>
+            <Button onClick={handlePrevious} color="#7950f2" text="#FFF">
+              <span>👈</span> Previous
+            </Button>
+            <Button onClick={handleNext} color="#7950f2" text="#FFF">
+              Next <span>👉</span>
+            </Button>
           </div>
         </div>
       )}
     </>
+  );
+};
+
+const Button = ({ text, color, onClick, children }) => {
+  return (
+    <button style={{ backgroundColor: color, color: text }} onClick={onClick}>
+      {children}
+    </button>
   );
 };
 
